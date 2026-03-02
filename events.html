@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events & Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #101820, #000);
+      color: #fff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    header a {
+      color: #00ffd5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 50px;
+    }
+
+    .event-card {
+      background: #141414;
+      border-radius: 15px;
+      padding: 25px;
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .event-icon {
+      font-size: 30px;
+      color: #00ffd5;
+      min-width: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 40px;
+      background: #00ffd5;
+      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .register-btn:hover {
+      box-shadow: 0 0 25px #00ffd5;
+      transform: scale(1.05);
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<div class="container">
+  <h1>Events Rule & Registration</h1>
+  <p class="subtitle">Join our exciting events and showcase your talent</p>
+
+  <h2>Technical Events</h2>
+
+  <div class="event-card">
+    <div class="event-icon"><i class="fas fa-file-alt"></i></div>
+    <div>
+      <h3>Paper Presentation</h3>
+      <ul>
+        <li>Original paper only</li>
+        <li>Plagiarism below 15%</li>
+        <li>3–5 minutes presentation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-icon"><i class="fas fa-question-circle"></i></div>
+    <div>
+      <h3>Technical Quiz</h3>
+      <ul>
+        <li>Multiple elimination rounds</li>
+        <li>No mobile phones allowed</li>
+        <li>Round 1: MCQ</li>
+        <li>Round 2: Visual Round (Identify Component)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="event-card">
+    <div class="event-icon"><i class="fas fa-braille"></i></div>
+    <div>
+      <h3>Tech Startup Pitch</h3>
+      <ul>
+        <li>own Ideas only</li>
+        <li>Presentation format: PPT</li>
+        <li>3–5 minutes presentation</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Non-Technical Events</h2>
+
+  <div class="event-card">
+    <div class="event-icon"><i class="fas fa-gamepad"></i></div>
+    <div>
+      <h3>E-sport</h3>
+      <ul>
+        <li>Teams of 4</li>
+        <li>E-sport:Free-Fire</li>
+      </ul>
+    </div>
+  </div>
+    <div class="event-card">
+    <div class="event-icon"><i class="fas fa-light fa-cube"></i></div>
+    <div>
+      <h3>Rubik's Cube</h3>
+    <ul>
+      
+      <li>Team Size:Individual </li>
+      <li>Re-Entry Fee: ₹50</li>
+        
+    </ul>
+   </div>
+    </div>
+  <div class="event-card"> 
+    <div class="event-icon"><i class="fa-solid fa-dice"></i></div>
+    <div>
+      <h3>Fun games</h3>
+      <ul>
+        <li>Teams of 4</li>
+        <li>games says on spot</li>
+      </ul>
+    </div>
+  </div>
+  <div class="event-card">
+    <div class="event-icon"><i class="fas fa-comments"></i></div>
+    <div>
+      <h3>Connections</h3>
+    <ul>
+      <li>Teams of 4</li>
+      <li>image connition</li>
+    </ul>
+      
+    </div>
+    
+  </div>
+<div class="event-card">
+    <div class="event-icon"><i class="fas fa-ad"></i></div>
+    <div>
+      <h2>Ad Zap</h2>
+               <ul>
+                    <li>Team of 2-4 members can participate.</li>
+                    <li>Create an advertisement for a given product/service.</li>
+                    <li>Presentation time: 3-5 minutes.</li>
+                    <li>Judges will evaluate creativity and marketing skills.</li>
+                </ul>
+    </div>
+</div>
+       <hr><hr>
+    <h2>Certifications & Prizes</h2>
+ <div class="event-card">
+    <div class="event-icon"><i class="fas fa-bullhorn"></i></div>
+    <div>
+      <h3>Certifications</h3>
+    <ul>
+      <li>All the participants are receiving certificates</li>
+    </ul>
+      <h3>Exclusive Prizes </h3>
+      <ul>
+      <li> E-Sports Only</li>
+      <li>Prizes for 1st,2nd & 3rd places</li>
+       
+      </ul>
+   </div>
+    </div>
+    <hr><hr>
+  <div class="center">
+    <a class="register-btn" target="_blank"
+       href="https://forms.gle/Z1Hqbxg5qJrrQAzV7">
+      Register Now
+    </a>
+  </div>
+</div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.event-card').forEach(card => {
+    gsap.to(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 80%',
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  });
+</script>
+
+</body>
+</html>

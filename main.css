@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #101820, #000);
+  color: #fff;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Header */
+
+.hero-name {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ebda46,#46d5eb,#ff00c8,#8a14de,#14dec3,#00f5ff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    letter-spacing: 2px;
+}
+
+/* Gradient animation */
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+
+header h2 {
+  color: aquamarine;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #00ffd5;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 120px 40px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #00ffd5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,255,213,0.2);
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+}
+
+/* Cursor */
+#cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ffd5;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+/*location*/
+/* Google Map */
+.map-box {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 3rem;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(80, 16, 229, 0.4);
+    backdrop-filter: blur(8px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px rgba(110, 72, 170, 0.7);
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem 0;
+    background: transparent;
+}
+
+/* Container */
+#contact .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+/* Grid Layout */
+#contact .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Contact Card */
+#contact .card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(80, 16, 229, 0.35);
+}
+
+#contact .card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(110, 72, 170, 0.7);
+}
+
+/* Icons */
+#contact .card-icon {
+    font-size: 2.8rem;
+    color: #7aa2ff;
+    margin-bottom: 1.2rem;
+}
+
+/* Name */
+#contact .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Role */
+#contact .card p strong {
+    color: #c7c7ff;
+    font-weight: 600;
+}
+
+/* Contact Info */
+#contact .card p {
+    margin: 0.4rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+#contact .card i {
+    margin-right: 8px;
+    color: #913a74;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #contact .section-title {
+        font-size: 2rem;
+    }
+
+    #contact .card {
+        padding: 1.6rem;
+    }
+}
+/* Event highlights */
+.highlight {
+    position: relative;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(110, 72, 170, 0.2) 0%, rgba(157, 80, 187, 0.2) 100%);
+    z-index: -1;
+}
+
+.highlight h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.highlight p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+/* Marquee */
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    margin: 2rem 0;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee span {
+    display:inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    color:white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(37, 10, 99);
+    }
+
+    to {
+        text-shadow: 0 0 15px rgba(95, 0, 333, 0.8);
+    }
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary);
+    box-shadow: 0 20px 40px rgb(24, 45, 66);
+    transition: all 0.3s ease;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.about-text li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.about-text li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/*event image */
+.event-img {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+/*register button*/
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 40px;
+      background: #00ffd5;
+      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .register-btn:hover {
+      box-shadow: 0 0 25px #00ffd5;
+      transform: scale(1.05);
+    }
+
+    .center {
+      text-align: center;
+    }
